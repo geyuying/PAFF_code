@@ -34,7 +34,7 @@ Please refer to [HULC](https://github.com/lukashermann/hulc/tree/main) for downl
 
 ## Training
 **Stage-1**: Train your own policy on Env A/B/C of CALVIN dataset. In this repo, we follow [HULC](https://github.com/lukashermann/hulc/tree/main) for training the policy, but adopt the pre-trained [MDETR](https://github.com/ashkamath/mdetr) as
-the visual and language encoder
+the visual and language encoder.
 
 **Stage-2**: Make the policy trained in the first stage ''play'' with a series of randomly generated language instructions in Env D of CALVIN dataset. We record these demonstrations including the visual observations and the robot’s actions by the trained policy.
 
@@ -43,7 +43,7 @@ cd Play
 python hulc/evaluation/evaluate_policy_record.py  --dataset_path hulc/dataset/task_ABC_D --train_folder your_trained_policy_folder --last_k_checkpoints 1
 ```
 
-**Stage-3**: Fine-tune CLIP for the ability to relabel the recorded demonstrations through reasoning about sequential visual observations with Spatio-Temporal Adapter ([ST-Adapter](https://arxiv.org/pdf/2206.13559)) on Env A/B/C of CALVIN dataset.\
+**Stage-3**: Fine-tune CLIP for the ability to relabel the recorded demonstrations through reasoning about sequential visual observations with Spatio-Temporal Adapter ([ST-Adapter](https://arxiv.org/pdf/2206.13559)) on Env A/B/C of CALVIN dataset.
 
 ```bash
 cd CLIP_Finetune
