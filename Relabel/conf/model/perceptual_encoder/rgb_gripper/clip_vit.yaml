@@ -1,0 +1,6 @@
+_target_: hulc.models.perceptual_encoders.vision_clip_vit.VisionClip
+device: cuda
+clip_out: 4
+visual_features: 64
+freeze_backbone: true
+model_name: "ViT-B/32" # "RN101", "RN50x4", "RN50x16", "ViT-B/32", "ViT-B/16"

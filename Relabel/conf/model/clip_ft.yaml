@@ -1,0 +1,9 @@
+defaults:
+  - optimizer: adam
+  - lr_scheduler: constant
+
+_target_: hulc.models.hulc_clip_record_neg.Hulc
+_recursive_: false
+
+img_lang_matching_clip: true
+lang_clip_beta: ${loss.lang_clip_beta}

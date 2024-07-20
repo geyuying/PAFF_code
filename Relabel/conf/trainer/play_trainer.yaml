@@ -1,0 +1,6 @@
+gpus: 1
+precision: 16
+check_val_every_n_epoch: 1
+#val_check_interval: 10
+max_epochs: 1
+sync_batchnorm: false

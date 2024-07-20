@@ -1,0 +1,31 @@
+defaults:
+  - perceptual_encoder: gripper_cam_mdetr
+  - plan_proposal: default
+  - plan_recognition: transformers
+  - distribution:  discrete
+  - visual_goal: default
+  - fuse_visual_lang: none
+  - language_encoder: none
+  - language_goal: mdetr
+  - action_decoder: hulc_default_ori
+  - optimizer: adam
+  - lr_scheduler: constant
+  - lang_decoder: none
+  - lang_discriminator: none
+  - clip_proj: default
+  - /annotations@val_instructions: new_playtable_validation
+
+_target_: hulc.models.hulc.Hulc
+_recursive_: false
+
+kl_beta: ${loss.kl_beta}
+kl_balancing_mix: ${loss.kl_balancing_mix}
+state_recons: false
+state_recon_beta: ${loss.state_recon_beta}
+lang_recons: false
+lang_recon_beta: ${loss.lang_recon_beta}
+lang_contrastive: false
+lang_contrastive_beta: ${loss.lang_contrastive_beta}
+replan_freq: 30
+img_lang_matching_clip: false
+lang_clip_beta: ${loss.lang_clip_beta}

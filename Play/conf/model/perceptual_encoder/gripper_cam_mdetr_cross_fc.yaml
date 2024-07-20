@@ -1,0 +1,10 @@
+_target_: hulc.models.perceptual_encoders.concat_encoders_mdetr.ConcatEncoders
+_recursive_: false
+
+defaults:
+ - rgb_static: mdetr_cross_fc
+ - rgb_gripper: mdetr_cross_fc
+ - depth_static: none
+ - depth_gripper: none
+ - proprio: none
+ - tactile: none

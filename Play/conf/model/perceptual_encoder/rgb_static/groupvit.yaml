@@ -1,0 +1,5 @@
+_target_: hulc.models.perceptual_encoders.vision_groupvit.VisionGroupVit
+device: cuda
+vit_out: 384
+visual_features: 64
+freeze_backbone: true

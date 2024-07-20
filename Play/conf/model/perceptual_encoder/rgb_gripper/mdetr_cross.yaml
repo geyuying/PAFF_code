@@ -1,0 +1,6 @@
+_target_: hulc.models.perceptual_encoders.vision_mdetr_cross.VisionMdetr
+device: cuda
+mdetr_out: 9
+visual_features: 256
+freeze_backbone: true
+model_name: "resnet101" # "RN101", "RN50x4", "RN50x16", "ViT-B/32", "ViT-B/16"
